@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rema Days 2026 – Uczniowie</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 0;
+      background: #f4f6f8;
+      color: #222;
+    }
+    header {
+      padding: 18px 16px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.2rem;
+      background: linear-gradient(135deg, #4f46e5, #6366f1);
+      color: #fff;
+    }
+    .container {
+      padding: 16px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    .tile {
+      background: #ffffff;
+      border-radius: 22px;
+      padding: 36px 24px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+      cursor: pointer;
+      font-size: 1.4rem;
+      font-weight: 700;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .tile:hover { transform: translateY(-2px); }
+    .tile:active { transform: scale(0.98); }
+    .primary { background:#eef2ff; border-left:6px solid #4f46e5; }
+    .secondary { background:#fff7ed; border-left:6px solid #f97316; }
+    .tertiary { background:#ecfeff; border-left:6px solid #06b6d4; }
+    .hidden { display:none; }
+    .card {
+      background:#fff;
+      padding:16px;
+      border-radius:16px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.08);
+      margin-bottom:16px;
+    }
+    .back {
+      margin-top:16px;
+      background:#1f7a4a;
+      color:#fff;
+      border:none;
+      padding:14px 16px;
+      border-radius:14px;
+      font-size:1rem;
+      width:100%;
+      cursor:pointer;
+    }
+  </style>
+</head>
+<body>
+<header>Rema Days 2026</header>
+<div class="container">
+
+<!-- HOME -->
+<div id="home">
+  <div class="grid">
+    <div class="tile primary" onclick="openRegistration()">Rejestracja</div>
+    <div class="tile secondary" onclick="openParticipation()">Uczestnictwo</div>
+    <div class="tile tertiary" onclick="openAfter()">Po targach</div>
+  </div>
+</div>
+
+<!-- REJESTRACJA -->
+<div id="registration" class="hidden">
+  <div class="card">
+    <h3>Rejestracja</h3>
+    <p>Wybierz swoje nazwisko. Po kliknięciu zobaczysz firmę, do której jesteś przydzielony/a, oraz dane do ankiety wstępnej.</p>
+  </div>
+
+  <!-- LISTA UCZNIÓW -->
+  <div class="card">
+    <ul>
+      <li><button onclick="openPerson('u1')">Kania Amelia</button></li>
+      <li><button onclick="openPerson('u2')">Jarosz Julia</button></li>
+      <li><button onclick="openPerson('u3')">Banaś Anna</button></li>
+      <li><button onclick="openPerson('u4')">Baran Aleksandra</button></li>
+      <li><button onclick="openPerson('u5')">Buczak Emilia</button></li>
+      <li><button onclick="openPerson('u6')">Dąbrowski Adrian</button></li>
+      <li><button onclick="openPerson('u7')">Kosiba Gabriela</button></li>
+
+      <li><button onclick="openPerson('u8')">Kozioł Maria</button></li>
+      <li><button onclick="openPerson('u9')">Kucharska Amelia</button></li>
+      <li><button onclick="openPerson('u10')">Kuta Aleksandra</button></li>
+      <li><button onclick="openPerson('u11')">Kutrzuba Magdalena</button></li>
+      <li><button onclick="openPerson('u12')">Kużdżał Laura</button></li>
+      <li><button onclick="openPerson('u13')">Majcher Zofia</button></li>
+      <li><button onclick="openPerson('u14')">Marć Magdalena</button></li>
+      <li><button onclick="openPerson('u15')">Misielak Sylwester</button></li>
+
+      <li><button onclick="openPerson('u16')">Nowak Natalia</button></li>
+      <li><button onclick="openPerson('u17')">Pasek Anna</button></li>
+      <li><button onclick="openPerson('u18')">Piłat Zuzanna</button></li>
+      <li><button onclick="openPerson('u19')">Sołowska Izabela</button></li>
+      <li><button onclick="openPerson('u20')">Wojtaszek Ignacy</button></li>
+      <li><button onclick="openPerson('u21')">Ozga Józef</button></li>
+
+      <li><button onclick="openPerson('u22')">Dziedzic Karol</button></li>
+      <li><button onclick="openPerson('u23')">Rączka Kasjopea</button></li>
+      <li><button onclick="openPerson('u24')">Szyszka Piotr</button></li>
+      <li><button onclick="openPerson('u25')">Tylec Emilia</button></li>
+      <li><button onclick="openPerson('u26')">Socha Konrad</button></li>
+
+      <li><button onclick="openPerson('u27')">Henk Kinga</button></li>
+      <li><button onclick="openPerson('u28')">Jamroch Katarzyna</button></li>
+      <li><button onclick="openPerson('u29')">Piękoś Jan</button></li>
+      <li><button onclick="openPerson('u30')">Rojek Anna</button></li>
+      <li><button onclick="openPerson('u31')">Szumańska Oliwia</button></li>
+    </ul>
+  </div>
+
+  <!-- KARTY UCZNIÓW / FIRM -->
+  <div id="people" class="hidden">
+
+    <!-- CHODAK TRAVEL -->
+    <div id="u1" class="card hidden"><strong>Kania Amelia</strong><br><br><strong>Firma:</strong> Chodak Travel<br><strong>Strona:</strong> chodaktrawel.pl<br><strong>Rodzaj:</strong> biuro turystyczne / ubezpieczenia<br><strong>NIP:</strong> 8722093280<br><strong>Liczba pracowników:</strong> 10–49<br><strong>Stanowisko:</strong> asystent ds. obsługi klienta</div>
+    <div id="u2" class="card hidden"><strong>Jarosz Julia</strong><br><br><strong>Firma:</strong> Chodak Travel<br><strong>Strona:</strong> chodaktrawel.pl<br><strong>Rodzaj:</strong> biuro turystyczne / ubezpieczenia<br><strong>NIP:</strong> 8722093280<br><strong>Liczba pracowników:</strong> 10–49<br><strong>Stanowisko:</strong> asystent ds. rezerwacji</div>
+    <div id="u3" class="card hidden"><strong>Banaś Anna</strong><br><br><strong>Firma:</strong> Chodak Travel<br><strong>Strona:</strong> chodaktrawel.pl<br><strong>Rodzaj:</strong> biuro turystyczne / ubezpieczenia<br><strong>NIP:</strong> 8722093280<br><strong>Liczba pracowników:</strong> 10–49<br><strong>Stanowisko:</strong> wsparcie administracyjne</div>
+    <div id="u4" class="card hidden"><strong>Baran Aleksandra</strong><br><br><strong>Firma:</strong> Chodak Travel<br><strong>Strona:</strong> chodaktrawel.pl<br><strong>Rodzaj:</strong> biuro turystyczne / ubezpieczenia<br><strong>NIP:</strong> 8722093280<br><strong>Liczba pracowników:</strong> 10–49<br><strong>Stanowisko:</strong> asystent biura</div>
+    <div id="u5" class="card hidden"><strong>Buczak Emilia</strong><br><br><strong>Firma:</strong> Chodak Travel<br><strong>Strona:</strong> chodaktrawel.pl<br><strong>Rodzaj:</strong> biuro turystyczne / ubezpieczenia<br><strong>NIP:</strong> 8722093280<br><strong>Liczba pracowników:</strong> 10–49<br><strong>Stanowisko:</strong> obsługa dokumentacji</div>
+    <div id="u6" class="card hidden"><strong>Dąbrowski Adrian</strong><br><br><strong>Firma:</strong> Chodak Travel<br><strong>Strona:</strong> chodaktrawel.pl<br><strong>Rodzaj:</strong> biuro turystyczne / ubezpieczenia<br><strong>NIP:</strong> 8722093280<br><strong>Liczba pracowników:</strong> 10–49<br><strong>Stanowisko:</strong> wsparcie techniczne biura</div>
+    <div id="u7" class="card hidden"><strong>Kosiba Gabriela</strong><br><br><strong>Firma:</strong> Chodak Travel<br><strong>Strona:</strong> chodaktrawel.pl<br><strong>Rodzaj:</strong> biuro turystyczne / ubezpieczenia<br><strong>NIP:</strong> 8722093280<br><strong>Liczba pracowników:</strong> 10–49<br><strong>Stanowisko:</strong> asystent ds. ubezpieczeń</div>
+
+    <!-- VERDA VIVO -->
+    <div id="u8" class="card hidden"><strong>Kozioł Maria</strong><br><br><strong>Firma:</strong> Verda Vivo<br><strong>Strona:</strong> verdavivo.pl<br><strong>Rodzaj:</strong> doradztwo środowiskowe<br><strong>NIP:</strong> 8722430903<br><strong>Liczba pracowników:</strong> 10–49<br><strong>Stanowisko:</strong> asystent ds. analiz środowiskowych</div>
+    <div id="u9" class="card hidden"><strong>Kucharska Amelia</strong><br><br><strong>Firma:</strong> Verda Vivo<br><strong>Strona:</strong> verdavivo.pl<br><strong>Rodzaj:</strong> doradztwo środowiskowe<br><strong>NIP:</strong> 8722430903<br><strong>Liczba pracowników:</strong> 10–49<br><strong>Stanowisko:</strong> wsparcie projektowe</div>
+    <div id="u10" class="card hidden"><strong>Kuta Aleksandra</strong><br><br><strong>Firma:</strong> Verda Vivo<br><strong>Strona:</strong> verdavivo.pl<br><strong>Rodzaj:</strong> doradztwo środowiskowe<br><strong>NIP:</strong> 8722430903<br><strong>Liczba pracowników:</strong> 10–49<br><strong>Stanowisko:</strong> asystent ds. dokumentacji</div>
+    <div id="u11" class="card hidden"><strong>Kutrzuba Magdalena</strong><br><br><strong>Firma:</strong> Verda Vivo<br><strong>Strona:</strong> verdavivo.pl<br><strong>Rodzaj:</strong> doradztwo środowiskowe<br><strong>NIP:</strong> 8722430903<br><strong>Liczba pracowników:</strong> 10–49<br><strong>Stanowisko:</strong> wsparcie administracyjne</div>
+    <div id="u12" class="card hidden"><strong>Kużdżał Laura</strong><br><br><strong>Firma:</strong> Verda Vivo<br><strong>Strona:</strong> verdavivo.pl<br><strong>Rodzaj:</strong> doradztwo środowiskowe<br><strong>NIP:</strong> 8722430903<br><strong>Liczba pracowników:</strong> 10–49<br><strong>Stanowisko:</strong> asystent ds. raportów</div>
+    <div id="u13" class="card hidden"><strong>Majcher Zofia</strong><br><br><strong>Firma:</strong> Verda Vivo<br><strong>Strona:</strong> verdavivo.pl<br><strong>Rodzaj:</strong> doradztwo środowiskowe<br><strong>NIP:</strong> 8722430903<br><strong>Liczba pracowników:</strong> 10–49<br><strong>Stanowisko:</strong> koordynacja danych projektowych</div>
+    <div id="u14" class="card hidden"><strong>Marć Magdalena</strong><br><br><strong>Firma:</strong> Verda Vivo<br><strong>Strona:</strong> verdavivo.pl<br><strong>Rodzaj:</strong> doradztwo środowiskowe<br><strong>NIP:</strong> 8722430903<br><strong>Liczba pracowników:</strong> 10–49<br><strong>Stanowisko:</strong> wsparcie zespołu doradczego</div>
+    <div id="u15" class="card hidden"><strong>Misielak Sylwester</strong><br><br><strong>Firma:</strong> Verda Vivo<br><strong>Strona:</strong> verdavivo.pl<br><strong>Rodzaj:</strong> doradztwo środowiskowe<br><strong>NIP:</strong> 8722430903<br><strong>Liczba pracowników:</strong> 10–49<br><strong>Stanowisko:</strong> asystent techniczny projektu</div>
+
+    <!-- BRGAZ -->
+    <div id="u16" class="card hidden"><strong>Nowak Natalia</strong><br><br><strong>Firma:</strong> BRGaz<br><strong>Strona:</strong> brgaz.pl<br><strong>Rodzaj:</strong> firma handlowa<br><strong>NIP:</strong> 8181501281<br><strong>Liczba pracowników:</strong> 10–49<br><strong>Stanowisko:</strong> asystent sprzedaży</div>
+    <div id="u17" class="card hidden"><strong>Pasek Anna</strong><br><br><strong>Firma:</strong> BRGaz<br><strong>Strona:</strong> brgaz.pl<br><strong>Rodzaj:</strong> firma handlowa<br><strong>NIP:</strong> 8181501281<br><strong>Liczba pracowników:</strong> 10–49<br><strong>Stanowisko:</strong> obsługa zamówień</div>
+    <div id="u18" class="card hidden"><strong>Piłat Zuzanna</strong><br><br><strong>Firma:</strong> BRGaz<br><strong>Strona:</strong> brgaz.pl<br><strong>Rodzaj:</strong> firma handlowa<br><strong>NIP:</strong> 8181501281<br><strong>Liczba pracowników:</strong> 10–49<br><strong>Stanowisko:</strong> wsparcie działu handlowego</div>
+    <div id="u19" class="card hidden"><strong>Sołowska Izabela</strong><br><br><strong>Firma:</strong> BRGaz<br><strong>Strona:</strong> brgaz.pl<br><strong>Rodzaj:</strong> firma handlowa<br><strong>NIP:</strong> 8181501281<br><strong>Liczba pracowników:</strong> 10–49<br><strong>Stanowisko:</strong> asystent ds. klienta</div>
+    <div id="u20" class="card hidden"><strong>Wojtaszek Ignacy</strong><br><br><strong>Firma:</strong> BRGaz<br><strong>Strona:</strong> brgaz.pl<br><strong>Rodzaj:</strong> firma handlowa<br><strong>NIP:</strong> 8181501281<br><strong>Liczba pracowników:</strong> 10–49<br><strong>Stanowisko:</strong> logistyka / wsparcie magazynowe</div>
+    <div id="u21" class="card hidden"><strong>Ozga Józef</strong><br><br><strong>Firma:</strong> BRGaz<br><strong>Strona:</strong> brgaz.pl<br><strong>Rodzaj:</strong> firma handlowa<br><strong>NIP:</strong> 8181501281<br><strong>Liczba pracowników:</strong> 10–49<br><strong>Stanowisko:</strong> pomoc techniczno-handlowa</div>
+
+    <!-- DAMIAN LIS FOTOGRAFIA -->
+    <div id="u22" class="card hidden"><strong>Dziedzic Karol</strong><br><br><strong>Firma:</strong> Damian Fotografia<br><strong>Strona:</strong> —<br><strong>Rodzaj:</strong> działalność fotograficzna<br><strong>NIP:</strong> 8722216311<br><strong>Liczba pracowników:</strong> 1–9<br><strong>Stanowisko:</strong> asystent fotografa</div>
+    <div id="u23" class="card hidden"><strong>Rączka Kasjopea</strong><br><br><strong>Firma:</strong> Damian Fotografia<br><strong>Strona:</strong> —<br><strong>Rodzaj:</strong> działalność fotograficzna<br><strong>NIP:</strong> 8722216311<br><strong>Liczba pracowników:</strong> 1–9<br><strong>Stanowisko:</strong> wsparcie sesji zdjęciowych</div>
+    <div id="u24" class="card hidden"><strong>Szyszka Piotr</strong><br><br><strong>Firma:</strong> Damian Fotografia<br><strong>Strona:</strong> —<br><strong>Rodzaj:</strong> działalność fotograficzna<br><strong>NIP:</strong> 8722216311<br><strong>Liczba pracowników:</strong> 1–9<br><strong>Stanowisko:</strong> asystent techniczny sprzętu</div>
+    <div id="u25" class="card hidden"><strong>Tylec Emilia</strong><br><br><strong>Firma:</strong> Damian Fotografia<br><strong>Strona:</strong> —<br><strong>Rodzaj:</strong> działalność fotograficzna<br><strong>NIP:</strong> 8722216311<br><strong>Liczba pracowników:</strong> 1–9<br><strong>Stanowisko:</strong> organizacja planu zdjęciowego</div>
+    <div id="u26" class="card hidden"><strong>Socha Konrad</strong><br><br><strong>Firma:</strong> Damian Fotografia<br><strong>Strona:</strong> —<br><strong>Rodzaj:</strong> działalność fotograficzna<br><strong>NIP:</strong> 8722216311<br><strong>Liczba pracowników:</strong> 1–9<br><strong>Stanowisko:</strong> postprodukcja / selekcja materiału</div>
+
+    <!-- AZ-KOM DAMIAN LIWO -->
+    <div id="u27" class="card hidden"><strong>Henk Kinga</strong><br><br><strong>Firma:</strong> az-kom Damian Liwo<br><strong>Strona:</strong> —<br><strong>Rodzaj:</strong> naprawa i konserwacja komputerów i urządzeń peryferyjnych<br><strong>NIP:</strong> 8181731880<br><strong>Liczba pracowników:</strong> 1–9<br><strong>Stanowisko:</strong> asystent serwisu</div>
+    <div id="u28" class="card hidden"><strong>Jamroch Katarzyna</strong><br><br><strong>Firma:</strong> az-kom Damian Liwo<br><strong>Strona:</strong> —<br><strong>Rodzaj:</strong> naprawa i konserwacja komputerów i urządzeń peryferyjnych<br><strong>NIP:</strong> 8181731880<br><strong>Liczba pracowników:</strong> 1–9<br><strong>Stanowisko:</strong> obsługa klienta serwisowego</div>
+    <div id="u29" class="card hidden"><strong>Piękoś Jan</strong><br><br><strong>Firma:</strong> az-kom Damian Liwo<br><strong>Strona:</strong> —<br><strong>Rodzaj:</strong> naprawa i konserwacja komputerów i urządzeń peryferyjnych<br><strong>NIP:</strong> 8181731880<br><strong>Liczba pracowników:</strong> 1–9<br><strong>Stanowisko:</strong> pomoc technika IT</div>
+    <div id="u30" class="card hidden"><strong>Rojek Anna</strong><br><br><strong>Firma:</strong> az-kom Damian Liwo<br><strong>Strona:</strong> —<br><strong>Rodzaj:</strong> naprawa i konserwacja komputerów i urządzeń peryferyjnych<br><strong>NIP:</strong> 8181731880<br><strong>Liczba pracowników:</strong> 1–9<br><strong>Stanowisko:</strong> wsparcie administracyjne serwisu</div>
+    <div id="u31" class="card hidden"><strong>Szumańska Oliwia</strong><br><br><strong>Firma:</strong> az-kom Damian Liwo<br><strong>Strona:</strong> —<br><strong>Rodzaj:</strong> naprawa i konserwacja komputerów i urządzeń peryferyjnych<br><strong>NIP:</strong> 8181731880<br><strong>Liczba pracowników:</strong> 1–9<br><strong>Stanowisko:</strong> koordynacja zgłoszeń</div>
+
+  </div>
+
+  <button class="back" onclick="closePerson()">⬅ Lista nazwisk</button>
+  <button class="back" onclick="goHome()">Strona główna</button>
+</div>
+
+<!-- UCZESTNICTWO -->
+<div id="participation" class="hidden">
+  <h3>Uczestnictwo – fiszki</h3>
+  <div id="flashGrid" class="grid">
+    <div class="tile secondary" onclick="openFlash('f1')">🎯 Po co tu jesteś</div>
+    <div class="tile secondary" onclick="openFlash('f2')">🧠 Jak się zachować</div>
+    <div class="tile secondary" onclick="openFlash('f3')">👀 Na co patrzeć</div>
+    <div class="tile secondary" onclick="openFlash('f4')">❓ O co pytać</div>
+    <div class="tile secondary" onclick="openFlash('f5')">📸 Co wynieść</div>
+    <div class="tile secondary" onclick="openFlash('f6')">⚠️ Czego nie robić</div>
+  </div>
+  <div id="flashcards" class="hidden">
+    <div id="f1" class="card hidden"><h4>🎯 Po co tu jesteś</h4><ul><li>zobaczyć, jak naprawdę działa branża reklamy</li><li>zobaczyć trendy i nowości w branży</li><li>zainspirować się nowościami i trendami w branży reklamowej i poligraficznej</li><li>zobaczyć realne stanowiska i zakresy obowiązków</li></ul></div>
+    <div id="f2" class="card hidden"><h4>🧠 Jak się zachować</h4><ul><li>bądź ciekawy i aktywny</li><li>zadawaj pytania, nie graj eksperta</li><li>korzystaj z prezentacji, pokazów i demonstracji</li><li>pytaj, co możesz zabrać (materiały, katalogi, próbki)</li><li>wczuj się w rolę: klienta, pracownika lub przyszłego specjalisty</li><li>telefon traktuj jak narzędzie</li></ul></div>
+    <div id="f3" class="card hidden"><h4>👀 Na co patrzeć</h4><ul><li>jak prezentowane są projekty i produkty</li><li>jak ludzie mówią o swojej pracy</li><li>jakie technologie się powtarzają (trendy)</li><li>czy jakość idzie w parze z marketingiem</li></ul></div>
+    <div id="f4" class="card hidden"><h4>❓ O co pytać</h4><ul><li><strong>sprzęt / technologia:</strong> dla kogo to jest? jaki błąd robią początkujący?</li><li><strong>usługi / druk / agencje:</strong> jak wygląda proces? co klienci źle rozumieją?</li><li><strong>rozwój zawodowy:</strong> jakie porady firma dałaby uczniowi kończącemu szkołę za 2–3 lata?</li><li><strong>branża:</strong> co najbardziej się liczy na tym stanowisku lub w tej branży?</li></ul></div>
+    <div id="f5" class="card hidden"><h4>📸 Co wynieść</h4><ul><li><strong>dosłownie:</strong> zdjęcia stoisk, rozwiązań, materiały, którymi dzielą się firmy</li><li><strong>w przenośni:</strong> inspiracje, pomysły do własnych projektów, kierunek nauki, świadomość braków</li></ul></div>
+    <div id="f6" class="card hidden"><h4>⚠️ Czego nie robić</h4><ul><li>nie narzekaj, że wszystko już widziałeś</li><li>pamiętaj: to tylko 3 godziny, a nie zoo do oglądania</li><li>to miejsce do doświadczania i inspirowania się</li><li>nie znikaj bez celu – zobacz, czego jeszcze nie wiesz i co warto wiedzieć</li><li><strong>w skrócie:</strong> wykorzystaj czas maksymalnie</li></ul></div>
+  </div>
+  <button class="back" onclick="backToFlashes()">⬅ Wróć do fiszek</button>
+  <button class="back" onclick="goHome()">Strona główna</button>
+</div>
+
+<!-- PO TARGACH -->
+<div id="after" class="hidden">
+  <div class="card">
+    <h3>Po targach</h3>
+    <ol>
+      <li><strong>Co Cię naprawdę zaskoczyło?</strong><br><small>(np. skala sprzętu, sposób rozmowy z klientem, technologie)</small></li>
+      <li><strong>Co było dla Ciebie najciekawsze i dlaczego?</strong><br><small>(konkretnie, nie ogólnie)</small></li>
+      <li><strong>Jedna rzecz, której się dowiedziałeś(-aś), a wcześniej nie wiedziałeś(-aś)</strong></li>
+      <li><strong>Jaką umiejętność lub obszar warto rozwijać, jeśli myślisz o tej branży?</strong><br><small>(np. grafika, druk, sprzedaż, technologia, komunikacja)</small></li>
+      <li><strong>Czy widzisz siebie w tej branży?</strong><br><small>tak / nie / jeszcze nie wiem – jedno zdanie dlaczego</small></li>
+    </ol>
+  </div>
+  <button class="back" onclick="goHome()">Strona główna</button>
+</div>
+</div>
+
+</div>
+<script>
+function hideAll(){['home','registration','participation','after'].forEach(id=>document.getElementById(id).classList.add('hidden'));}
+function goHome(){hideAll();document.getElementById('home').classList.remove('hidden');}
+function openRegistration(){hideAll();document.getElementById('registration').classList.remove('hidden');}
+function openParticipation(){hideAll();document.getElementById('participation').classList.remove('hidden');}
+function openAfter(){hideAll();document.getElementById('after').classList.remove('hidden');}
+function openFlash(id){document.getElementById('flashGrid').classList.add('hidden');document.getElementById('flashcards').classList.remove('hidden');document.querySelectorAll('#flashcards .card').forEach(c=>c.classList.add('hidden'));document.getElementById(id).classList.remove('hidden');}
+function backToFlashes(){
+  document.getElementById('flashcards').classList.add('hidden');
+  document.getElementById('flashGrid').classList.remove('hidden');
+}
+function openPerson(id){document.getElementById('people').classList.remove('hidden');document.querySelectorAll('#people .card').forEach(c=>c.classList.add('hidden'));document.getElementById(id).classList.remove('hidden');}
+function closePerson(){document.getElementById('people').classList.add('hidden');}
+function backToFlashes(){document.getElementById('flashcards').classList.add('hidden');document.getElementById('flashGrid').classList.remove('hidden');}
+</script>
+</body>
+</html>
