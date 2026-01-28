@@ -1,224 +1,102 @@
 <!DOCTYPE html>
-<html lang="pl">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Rema Days 2026 – Uczniowie</title>
-<style>
-body{font-family:system-ui,-apple-system,Segoe UI,sans-serif;margin:0;background:#f4f6f8;color:#222}
-header{padding:18px;text-align:center;font-weight:700;font-size:1.2rem;background:linear-gradient(135deg,#4f46e5,#6366f1);color:#fff}
-.container{padding:16px}
-.grid{display:grid;grid-template-columns:1fr;gap:20px}
-.tile{background:#fff;border-radius:22px;padding:36px 24px;box-shadow:0 10px 24px rgba(0,0,0,.12);font-size:1.4rem;font-weight:700;cursor:pointer}
-.primary{background:#eef2ff;border-left:6px solid #4f46e5}
-.secondary{background:#fff7ed;border-left:6px solid #f97316}
-.tertiary{background:#ecfeff;border-left:6px solid #06b6d4}
-.hidden{display:none}
-.card{background:#fff;padding:16px;border-radius:16px;box-shadow:0 4px 10px rgba(0,0,0,.08);margin-bottom:16px}
-.back{margin-top:16px;background:#1f7a4a;color:#fff;border:none;padding:14px;border-radius:14px;width:100%;cursor:pointer}
-ul{padding-left:18px}
-li button{width:100%;padding:10px;border-radius:10px;border:1px solid #ddd;background:#fafafa;text-align:left}
-ol{padding-left:18px}
-.small{color:#555;font-size:.95rem}
-hr{border:none;border-top:1px solid #eee;margin:12px 0}
-</style>
-</head>
-<body>
 
-<header>Rema Days 2026</header>
-<div class="container">
+<html lang="pl"> <head> <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <title>Rema Days 2026 – Uczniowie</title> <style> body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 0; background: #f4f6f8; color: #222; } header { padding: 18px 16px; text-align: center; font-weight: 700; font-size: 1.2rem; background: linear-gradient(135deg, #4f46e5, #6366f1); color: #fff; } .container { padding: 16px; } .grid { display: grid; grid-template-columns: 1fr; gap: 20px; } .tile { background: #ffffff; border-radius: 22px; padding: 36px 24px; box-shadow: 0 10px 24px rgba(0,0,0,0.12); cursor: pointer; font-size: 1.4rem; font-weight: 700; transition: transform 0.15s ease, box-shadow 0.15s ease; } .tile:hover { transform: translateY(-2px); } .tile:active { transform: scale(0.98); } .primary { background:#eef2ff; border-left:6px solid #4f46e5; } .secondary { background:#fff7ed; border-left:6px solid #f97316; } .tertiary { background:#ecfeff; border-left:6px solid #06b6d4; } .hidden { display:none; } .card { background:#fff; padding:16px; border-radius:16px; box-shadow:0 4px 10px rgba(0,0,0,0.08); margin-bottom:16px; } .back { margin-top:16px; background:#1f7a4a; color:#fff; border:none; padding:14px 16px; border-radius:14px; font-size:1rem; width:100%; cursor:pointer; } </style> </head> <body> <header>Rema Days 2026</header> <div class="container">
 
-<!-- HOME -->
-<div id="home">
-  <div class="grid">
-    <div class="tile primary" onclick="show('registration')">Rejestracja</div>
-    <div class="tile secondary" onclick="show('participation')">Uczestnictwo</div>
-    <div class="tile tertiary" onclick="show('after')">Po targach</div>
-  </div>
+<div id="home"> <div class="grid"> <div class="tile primary" onclick="openRegistration()">Rejestracja</div> <div class="tile secondary" onclick="openParticipation()">Uczestnictwo</div> <div class="tile tertiary" onclick="openAfter()">Po targach</div> </div> </div>
+
+<div id="registration" class="hidden"> <div class="card"> <h3>Rejestracja</h3> <p>Wybierz swoje nazwisko. Po kliknięciu zobaczysz firmę, do której jesteś przydzielony/a, oraz dane do ankiety wstępnej.</p> </div>
+
+<div class="card"> <ul> <li><button onclick="openPerson('u1')">Kania Amelia</button></li> <li><button onclick="openPerson('u2')">Jarosz Julia</button></li> <li><button onclick="openPerson('u3')">Banaś Amelia</button></li> <li><button onclick="openPerson('u4')">Baran Julia</button></li> <li><button onclick="openPerson('u5')">Buczak Kinga</button></li> <li><button onclick="openPerson('u6')">Dąbrowski Adrian</button></li> <li><button onclick="openPerson('u7')">Kosiba Maria</button></li>
+
+  <li><button onclick="openPerson('u8')">Kozioł Natalia</button></li>
+  <li><button onclick="openPerson('u9')">Kucharska Julia</button></li>
+  <li><button onclick="openPerson('u10')">Kuta Weronika</button></li>
+  <li><button onclick="openPerson('u11')">Kutrzuba Beata</button></li>
+  <li><button onclick="openPerson('u12')">Kużdżał Oliwia</button></li>
+  <li><button onclick="openPerson('u13')">Majcher Julia</button></li>
+  <li><button onclick="openPerson('u14')">Marć Julia</button></li>
+  <li><button onclick="openPerson('u15')">Misielak Bartłomiej</button></li>
+
+  <li><button onclick="openPerson('u16')">Nowak Gabriela</button></li>
+  <li><button onclick="openPerson('u17')">Pasek Amelia</button></li>
+  <li><button onclick="openPerson('u18')">Piłat Lena</button></li>
+  <li><button onclick="openPerson('u19')">Sołowska Karolina</button></li>
+  <li><button onclick="openPerson('u20')">Wojtaszek Ignacy</button></li>
+  <li><button onclick="openPerson('u21')">Ozga Kacper</button></li>
+
+  <li><button onclick="openPerson('u22')">Dziedzic Konrad</button></li>
+  <li><button onclick="openPerson('u23')">Rączka Amelia</button></li>
+  <li><button onclick="openPerson('u24')">Szyszka Kamil</button></li>
+  <li><button onclick="openPerson('u25')">Tylec Emilia</button></li>
+  <li><button onclick="openPerson('u26')">Socha Wiktor</button></li>
+
+  <li><button onclick="openPerson('u27')">Henk Martyna</button></li>
+  <li><button onclick="openPerson('u28')">Jamroch Katarzyna</button></li>
+  <li><button onclick="openPerson('u29')">Piękoś Adrian</button></li>
+  <li><button onclick="openPerson('u30')">Rojek Anna</button></li>
+  <li><button onclick="openPerson('u31')">Szumańska Wiktoria</button></li>
+</ul>
 </div>
 
-<!-- REJESTRACJA -->
-<div id="registration" class="hidden">
-  <div class="card">
-    <h3>Rejestracja</h3>
-    <p>Wybierz swoje nazwisko i wykonaj <strong>kroki 1–5 dokładnie w tej kolejności</strong>.</p>
-  </div>
-
-  <div class="card">
-<ul>
-<li><button onclick="openPerson('u1')">Kania Amelia</button></li>
-<li><button onclick="openPerson('u2')">Jarosz Julia</button></li>
-<li><button onclick="openPerson('u3')">Banaś Amelia</button></li>
-<li><button onclick="openPerson('u4')">Baran Julia</button></li>
-<li><button onclick="openPerson('u5')">Buczak Kinga</button></li>
-<li><button onclick="openPerson('u6')">Dąbrowski Adrian</button></li>
-<li><button onclick="openPerson('u7')">Kosiba Maria</button></li>
-<li><button onclick="openPerson('u8')">Kozioł Natalia</button></li>
-<li><button onclick="openPerson('u9')">Kucharska Julia</button></li>
-<li><button onclick="openPerson('u10')">Kuta Weronika</button></li>
-<li><button onclick="openPerson('u11')">Kutrzuba Beata</button></li>
-<li><button onclick="openPerson('u12')">Kużdżał Oliwia</button></li>
-<li><button onclick="openPerson('u13')">Majcher Julia</button></li>
-<li><button onclick="openPerson('u14')">Marć Julia</button></li>
-<li><button onclick="openPerson('u15')">Misielak Bartłomiej</button></li>
-<li><button onclick="openPerson('u16')">Nowak Gabriela</button></li>
-<li><button onclick="openPerson('u17')">Pasek Amelia</button></li>
-<li><button onclick="openPerson('u18')">Piłat Lena</button></li>
-<li><button onclick="openPerson('u19')">Sołowska Karolina</button></li>
-<li><button onclick="openPerson('u20')">Wojtaszek Ignacy</button></li>
-<li><button onclick="openPerson('u21')">Ozga Kacper</button></li>
-<li><button onclick="openPerson('u22')">Dziedzic Konrad</button></li>
-<li><button onclick="openPerson('u23')">Rączka Amelia</button></li>
-<li><button onclick="openPerson('u24')">Szyszka Kamil</button></li>
-<li><button onclick="openPerson('u25')">Tylec Emilia</button></li>
-<li><button onclick="openPerson('u26')">Socha Wiktor</button></li>
-<li><button onclick="openPerson('u27')">Henk Martyna</button></li>
-<li><button onclick="openPerson('u28')">Jamroch Katarzyna</button></li>
-<li><button onclick="openPerson('u29')">Piękoś Adrian</button></li>
-<li><button onclick="openPerson('u30')">Rojek Anna</button></li>
-<li><button onclick="openPerson('u31')">Szumańska Wiktoria</button></li>
-</ul>
-  </div>
-
-<!-- KARTY UCZNIÓW -->
 <div id="people" class="hidden">
 
-<!-- ===== CHODAK TRAVEL (u1–u7) ===== -->
-<div id="u1" class="card hidden"><strong>Kania Amelia</strong>
-<ol>
-<li>Wpisz nazwę firmy: <strong>Chodak Travel</strong></li>
-<li>W „Główna działalność” zaznacz: <strong>inne</strong></li>
-<li>W „Stanowisko” zaznacz: <strong>inne</strong></li>
-<li>Sprawdź adres firmy</li>
-<li>Wyślij formularz</li>
-</ol>
-<hr>
-<div class="small">
-Firma: Chodak Travel<br>
-Adres: Dębica, ul. Rzeszowska 26<br>
-Strona: chodaktrawel.pl<br>
-NIP: 8722093280
+<div id="u1" class="card hidden"><strong>Kania Amelia</strong><br><br><strong>Firma:</strong> Chodak Travel<br><strong>Adres:</strong> ul. Rzeszowska 26, 39-200 Dębica<br><strong>Strona:</strong> chodaktravel.pl<br><strong>NIP:</strong> 8722093280<br><strong>Profil:</strong> biuro turystyczne / ubezpieczenia<br><br><strong>KROKI REJESTRACJI:</strong><br>1. Kim jesteś? → Firma<br>2. Dane: imię, nazwisko, e-mail, numer telefonu, NIP, adres<br>3. Czym jesteś zainteresowany? → gadżety reklamowe, tekstylia<br>4. Główny profil działalności → Inne<br>5. Stanowisko zawodowe → Inne</div>
+<div id="u2" class="card hidden"><strong>Jarosz Julia</strong><br><br><strong>Firma:</strong> Chodak Travel<br><strong>Adres:</strong> ul. Rzeszowska 26, 39-200 Dębica<br><strong>Strona:</strong> chodaktravel.pl<br><strong>NIP:</strong> 8722093280<br><strong>Profil:</strong> biuro turystyczne / ubezpieczenia<br><br><strong>KROKI REJESTRACJI:</strong><br>1. Kim jesteś? → Firma<br>2. Dane: imię, nazwisko, e-mail, numer telefonu, NIP, adres<br>3. Czym jesteś zainteresowany? → gadżety reklamowe, tekstylia<br>4. Główny profil działalności → Inne<br>5. Stanowisko zawodowe → Inne</div>
+<div id="u3" class="card hidden"><strong>Banaś Amelia</strong><br><br><strong>Firma:</strong> Chodak Travel<br><strong>Adres:</strong> ul. Rzeszowska 26, 39-200 Dębica<br><strong>Strona:</strong> chodaktravel.pl<br><strong>NIP:</strong> 8722093280<br><strong>Profil:</strong> biuro turystyczne / ubezpieczenia<br><br><strong>KROKI REJESTRACJI:</strong><br>1. Kim jesteś? → Firma<br>2. Dane: imię, nazwisko, e-mail, numer telefonu, NIP, adres<br>3. Czym jesteś zainteresowany? → gadżety reklamowe, tekstylia<br>4. Główny profil działalności → Inne<br>5. Stanowisko zawodowe → Inne</div>
+<div id="u4" class="card hidden"><strong>Baran Julia</strong><br><br><strong>Firma:</strong> Chodak Travel<br><strong>Adres:</strong> ul. Rzeszowska 26, 39-200 Dębica<br><strong>Strona:</strong> chodaktravel.pl<br><strong>NIP:</strong> 8722093280<br><strong>Profil:</strong> biuro turystyczne / ubezpieczenia<br><br><strong>KROKI REJESTRACJI:</strong><br>1. Kim jesteś? → Firma<br>2. Dane: imię, nazwisko, e-mail, numer telefonu, NIP, adres<br>3. Czym jesteś zainteresowany? → gadżety reklamowe, tekstylia<br>4. Główny profil działalności → Inne<br>5. Stanowisko zawodowe → Inne</div>
+<div id="u5" class="card hidden"><strong>Buczak Kinga</strong><br><br><strong>Firma:</strong> Chodak Travel<br><strong>Adres:</strong> ul. Rzeszowska 26, 39-200 Dębica<br><strong>Strona:</strong> chodaktravel.pl<br><strong>NIP:</strong> 8722093280<br><strong>Profil:</strong> biuro turystyczne / ubezpieczenia<br><br><strong>KROKI REJESTRACJI:</strong><br>1. Kim jesteś? → Firma<br>2. Dane: imię, nazwisko, e-mail, numer telefonu, NIP, adres<br>3. Czym jesteś zainteresowany? → gadżety reklamowe, tekstylia<br>4. Główny profil działalności → Inne<br>5. Stanowisko zawodowe → Inne</div>
+<div id="u6" class="card hidden"><strong>Dąbrowski Adrian</strong><br><br><strong>Firma:</strong> Chodak Travel<br><strong>Adres:</strong> ul. Rzeszowska 26, 39-200 Dębica<br><strong>Strona:</strong> chodaktravel.pl<br><strong>NIP:</strong> 8722093280<br><strong>Profil:</strong> biuro turystyczne / ubezpieczenia<br><br><strong>KROKI REJESTRACJI:</strong><br>1. Kim jesteś? → Firma<br>2. Dane: imię, nazwisko, e-mail, numer telefonu, NIP, adres<br>3. Czym jesteś zainteresowany? → gadżety reklamowe, tekstylia<br>4. Główny profil działalności → Inne<br>5. Stanowisko zawodowe → Inne</div>
+<div id="u7" class="card hidden"><strong>Kosiba Maria</strong><br><br><strong>Firma:</strong> Chodak Travel<br><strong>Adres:</strong> ul. Rzeszowska 26, 39-200 Dębica<br><strong>Strona:</strong> chodaktravel.pl<br><strong>NIP:</strong> 8722093280<br><strong>Profil:</strong> biuro turystyczne / ubezpieczenia<br><br><strong>KROKI REJESTRACJI:</strong><br>1. Kim jesteś? → Firma<br>2. Dane: imię, nazwisko, e-mail, numer telefonu, NIP, adres<br>3. Czym jesteś zainteresowany? → gadżety reklamowe, tekstylia<br>4. Główny profil działalności → Inne<br>5. Stanowisko zawodowe → Inne</div>
+
+<div id="u8" class="card hidden"><strong>Kozioł Natalia</strong><br><br><strong>Firma:</strong> Verda Vivo<br><strong>Adres:</strong> ul. Polna 17 lok. 2, 39-200 Dębica<br><strong>Strona:</strong> verdavivo.pl<br><strong>NIP:</strong> 8722430903<br><strong>Profil:</strong> doradztwo środowiskowe<br><br><strong>KROKI REJESTRACJI:</strong><br>1. Kim jesteś? → Firma<br>2. Dane: imię, nazwisko, e-mail, numer telefonu, NIP, adres<br>3. Czym jesteś zainteresowany? → gadżety reklamowe, tekstylia<br>4. Główny profil działalności → Inne<br>5. Stanowisko zawodowe → Inne</div>
+<div id="u9" class="card hidden"><strong>Kucharska Julia</strong><br><br><strong>Firma:</strong> Verda Vivo<br><strong>Adres:</strong> ul. Polna 17 lok. 2, 39-200 Dębica<br><strong>Strona:</strong> verdavivo.pl<br><strong>NIP:</strong> 8722430903<br><strong>Profil:</strong> doradztwo środowiskowe<br><br><strong>KROKI REJESTRACJI:</strong><br>1. Kim jesteś? → Firma<br>2. Dane: imię, nazwisko, e-mail, numer telefonu, NIP, adres<br>3. Czym jesteś zainteresowany? → gadżety reklamowe, tekstylia<br>4. Główny profil działalności → Inne<br>5. Stanowisko zawodowe → Inne</div>
+<div id="u10" class="card hidden"><strong>Kuta Weronika</strong><br><br><strong>Firma:</strong> Verda Vivo<br><strong>Adres:</strong> ul. Polna 17 lok. 2, 39-200 Dębica<br><strong>Strona:</strong> verdavivo.pl<br><strong>NIP:</strong> 8722430903<br><strong>Profil:</strong> doradztwo środowiskowe<br><br><strong>KROKI REJESTRACJI:</strong><br>1. Kim jesteś? → Firma<br>2. Dane: imię, nazwisko, e-mail, numer telefonu, NIP, adres<br>3. Czym jesteś zainteresowany? → gadżety reklamowe, tekstylia<br>4. Główny profil działalności → Inne<br>5. Stanowisko zawodowe → Inne</div>
+<div id="u11" class="card hidden"><strong>Kutrzuba Beata</strong><br><br><strong>Firma:</strong> Verda Vivo<br><strong>Adres:</strong> ul. Polna 17 lok. 2, 39-200 Dębica<br><strong>Strona:</strong> verdavivo.pl<br><strong>NIP:</strong> 8722430903<br><strong>Profil:</strong> doradztwo środowiskowe<br><br><strong>KROKI REJESTRACJI:</strong><br>1. Kim jesteś? → Firma<br>2. Dane: imię, nazwisko, e-mail, numer telefonu, NIP, adres<br>3. Czym jesteś zainteresowany? → gadżety reklamowe, tekstylia<br>4. Główny profil działalności → Inne<br>5. Stanowisko zawodowe → Inne</div>
+<div id="u12" class="card hidden"><strong>Kużdżał Oliwia</strong><br><br><strong>Firma:</strong> Verda Vivo<br><strong>Adres:</strong> ul. Polna 17 lok. 2, 39-200 Dębica<br><strong>Strona:</strong> verdavivo.pl<br><strong>NIP:</strong> 8722430903<br><strong>Profil:</strong> doradztwo środowiskowe<br><br><strong>KROKI REJESTRACJI:</strong><br>1. Kim jesteś? → Firma<br>2. Dane: imię, nazwisko, e-mail, numer telefonu, NIP, adres<br>3. Czym jesteś zainteresowany? → gadżety reklamowe, tekstylia<br>4. Główny profil działalności → Inne<br>5. Stanowisko zawodowe → Inne</div>
+<div id="u13" class="card hidden"><strong>Majcher Julia</strong><br><br><strong>Firma:</strong> Verda Vivo<br><strong>Adres:</strong> ul. Polna 17 lok. 2, 39-200 Dębica<br><strong>Strona:</strong> verdavivo.pl<br><strong>NIP:</strong> 8722430903<br><strong>Profil:</strong> doradztwo środowiskowe<br><br><strong>KROKI REJESTRACJI:</strong><br>1. Kim jesteś? → Firma<br>2. Dane: imię, nazwisko, e-mail, numer telefonu, NIP, adres<br>3. Czym jesteś zainteresowany? → gadżety reklamowe, tekstylia<br>4. Główny profil działalności → Inne<br>5. Stanowisko zawodowe → Inne</div>
+<div id="u14" class="card hidden"><strong>Marć Julia</strong><br><br><strong>Firma:</strong> Verda Vivo<br><strong>Adres:</strong> ul. Polna 17 lok. 2, 39-200 Dębica<br><strong>Strona:</strong> verdavivo.pl<br><strong>NIP:</strong> 8722430903<br><strong>Profil:</strong> doradztwo środowiskowe<br><br><strong>KROKI REJESTRACJI:</strong><br>1. Kim jesteś? → Firma<br>2. Dane: imię, nazwisko, e-mail, numer telefonu, NIP, adres<br>3. Czym jesteś zainteresowany? → gadżety reklamowe, tekstylia<br>4. Główny profil działalności → Inne<br>5. Stanowisko zawodowe → Inne</div>
+<div id="u15" class="card hidden"><strong>Misielak Bartłomiej</strong><br><br><strong>Firma:</strong> Verda Vivo<br><strong>Adres:</strong> ul. Polna 17 lok. 2, 39-200 Dębica<br><strong>Strona:</strong> verdavivo.pl<br><strong>NIP:</strong> 8722430903<br><strong>Profil:</strong> doradztwo środowiskowe<br><br><strong>KROKI REJESTRACJI:</strong><br>1. Kim jesteś? → Firma<br>2. Dane: imię, nazwisko, e-mail, numer telefonu, NIP, adres<br>3. Czym jesteś zainteresowany? → gadżety reklamowe, tekstylia<br>4. Główny profil działalności → Inne<br>5. Stanowisko zawodowe → Inne</div>
+
+<div id="u16" class="card hidden"><strong>Nowak Gabriela</strong><br><br><strong>Firma:</strong> BRGaz<br><strong>Adres:</strong> ul. Rzeszowska 139, 39-200 Dębica<br><strong>Strona:</strong> brgaz.pl<br><strong>NIP:</strong> 8181501281<br><strong>Profil:</strong> firma handlowa<br><br><strong>KROKI REJESTRACJI:</strong><br>1. Kim jesteś? → Firma<br>2. Dane: imię, nazwisko, e-mail, numer telefonu, NIP, adres<br>3. Czym jesteś zainteresowany? → sprzęt<br>4. Główny profil działalności → Inne<br>5. Stanowisko zawodowe → Inne</div>
+<div id="u17" class="card hidden"><strong>Pasek Amelia</strong><br><br><strong>Firma:</strong> BRGaz<br><strong>Adres:</strong> ul. Rzeszowska 139, 39-200 Dębica<br><strong>Strona:</strong> brgaz.pl<br><strong>NIP:</strong> 8181501281<br><strong>Profil:</strong> firma handlowa<br><br><strong>KROKI REJESTRACJI:</strong><br>1. Kim jesteś? → Firma<br>2. Dane: imię, nazwisko, e-mail, numer telefonu, NIP, adres<br>3. Czym jesteś zainteresowany? → sprzęt<br>4. Główny profil działalności → Inne<br>5. Stanowisko zawodowe → Inne</div>
+<div id="u18" class="card hidden"><strong>Piłat Lena</strong><br><br><strong>Firma:</strong> BRGaz<br><strong>Adres:</strong> ul. Rzeszowska 139, 39-200 Dębica<br><strong>Strona:</strong> brgaz.pl<br><strong>NIP:</strong> 8181501281<br><strong>Profil:</strong> firma handlowa<br><br><strong>KROKI REJESTRACJI:</strong><br>1. Kim jesteś? → Firma<br>2. Dane: imię, nazwisko, e-mail, numer telefonu, NIP, adres<br>3. Czym jesteś zainteresowany? → sprzęt<br>4. Główny profil działalności → Inne<br>5. Stanowisko zawodowe → Inne</div>
+<div id="u19" class="card hidden"><strong>Sołowska Karolina</strong><br><br><strong>Firma:</strong> BRGaz<br><strong>Adres:</strong> ul. Rzeszowska 139, 39-200 Dębica<br><strong>Strona:</strong> brgaz.pl<br><strong>NIP:</strong> 8181501281<br><strong>Profil:</strong> firma handlowa<br><br><strong>KROKI REJESTRACJI:</strong><br>1. Kim jesteś? → Firma<br>2. Dane: imię, nazwisko, e-mail, numer telefonu, NIP, adres<br>3. Czym jesteś zainteresowany? → sprzęt<br>4. Główny profil działalności → Inne<br>5. Stanowisko zawodowe → Inne</div>
+<div id="u20" class="card hidden"><strong>Wojtaszek Ignacy</strong><br><br><strong>Firma:</strong> BRGaz<br><strong>Adres:</strong> ul. Rzeszowska 139, 39-200 Dębica<br><strong>Strona:</strong> brgaz.pl<br><strong>NIP:</strong> 8181501281<br><strong>Profil:</strong> firma handlowa<br><br><strong>KROKI REJESTRACJI:</strong><br>1. Kim jesteś? → Firma<br>2. Dane: imię, nazwisko, e-mail, numer telefonu, NIP, adres<br>3. Czym jesteś zainteresowany? → sprzęt<br>4. Główny profil działalności → Inne<br>5. Stanowisko zawodowe → Inne</div>
+<div id="u21" class="card hidden"><strong>Ozga Kacper</strong><br><br><strong>Firma:</strong> BRGaz<br><strong>Adres:</strong> ul. Rzeszowska 139, 39-200 Dębica<br><strong>Strona:</strong> brgaz.pl<br><strong>NIP:</strong> 8181501281<br><strong>Profil:</strong> firma handlowa<br><br><strong>KROKI REJESTRACJI:</strong><br>1. Kim jesteś? → Firma<br>2. Dane: imię, nazwisko, e-mail, numer telefonu, NIP, adres<br>3. Czym jesteś zainteresowany? → sprzęt<br>4. Główny profil działalności → Inne<br>5. Stanowisko zawodowe → Inne</div>
+
+<div id="u22" class="card hidden"><strong>Dziedzic Konrad</strong><br><br><strong>Firma:</strong> Damian Lis Fotografia<br><strong>Adres:</strong> Zawierzbie 52a, 39-204 Żyraków<br><strong>Strona:</strong> damianlis.com<br><strong>NIP:</strong> 8722216311<br><strong>Profil:</strong> działalność fotograficzna<br><br><strong>KROKI REJESTRACJI:</strong><br>1. Kim jesteś? → Firma<br>2. Dane: imię, nazwisko, e-mail, numer telefonu, NIP, adres<br>3. Czym jesteś zainteresowany? → materiały promocyjne<br>4. Główny profil działalności → Inne<br>5. Stanowisko zawodowe → Inne</div>
+<div id="u23" class="card hidden"><strong>Rączka Amelia</strong><br><br><strong>Firma:</strong> Damian Lis Fotografia<br><strong>Adres:</strong> Zawierzbie 52a, 39-204 Żyraków<br><strong>Strona:</strong> damianlis.com<br><strong>NIP:</strong> 8722216311<br><strong>Profil:</strong> działalność fotograficzna<br><br><strong>KROKI REJESTRACJI:</strong><br>1. Kim jesteś? → Firma<br>2. Dane: imię, nazwisko, e-mail, numer telefonu, NIP, adres<br>3. Czym jesteś zainteresowany? → materiały promocyjne<br>4. Główny profil działalności → Inne<br>5. Stanowisko zawodowe → Inne</div>
+<div id="u24" class="card hidden"><strong>Szyszka Kamil</strong><br><br><strong>Firma:</strong> Damian Lis Fotografia<br><strong>Adres:</strong> Zawierzbie 52a, 39-204 Żyraków<br><strong>Strona:</strong> damianlis.com<br><strong>NIP:</strong> 8722216311<br><strong>Profil:</strong> działalność fotograficzna<br><br><strong>KROKI REJESTRACJI:</strong><br>1. Kim jesteś? → Firma<br>2. Dane: imię, nazwisko, e-mail, numer telefonu, NIP, adres<br>3. Czym jesteś zainteresowany? → materiały promocyjne<br>4. Główny profil działalności → Inne<br>5. Stanowisko zawodowe → Inne</div>
+<div id="u25" class="card hidden"><strong>Tylec Emilia</strong><br><br><strong>Firma:</strong> Damian Lis Fotografia<br><strong>Adres:</strong> Zawierzbie 52a, 39-204 Żyraków<br><strong>Strona:</strong> damianlis.com<br><strong>NIP:</strong> 8722216311<br><strong>Profil:</strong> działalność fotograficzna<br><br><strong>KROKI REJESTRACJI:</strong><br>1. Kim jesteś? → Firma<br>2. Dane: imię, nazwisko, e-mail, numer telefonu, NIP, adres<br>3. Czym jesteś zainteresowany? → materiały promocyjne<br>4. Główny profil działalności → Inne<br>5. Stanowisko zawodowe → Inne</div>
+<div id="u26" class="card hidden"><strong>Socha Wiktor</strong><br><br><strong>Firma:</strong> Damian Lis Fotografia<br><strong>Adres:</strong> Zawierzbie 52a, 39-204 Żyraków<br><strong>Strona:</strong> damianlis.com<br><strong>NIP:</strong> 8722216311<br><strong>Profil:</strong> działalność fotograficzna<br><br><strong>KROKI REJESTRACJI:</strong><br>1. Kim jesteś? → Firma<br>2. Dane: imię, nazwisko, e-mail, numer telefonu, NIP, adres<br>3. Czym jesteś zainteresowany? → materiały promocyjne<br>4. Główny profil działalności → Inne<br>5. Stanowisko zawodowe → Inne</div>
+
+<div id="u27" class="card hidden"><strong>Henk Martyna</strong><br><br><strong>Firma:</strong> AZ-KOM DAMIAN LIWO<br><strong>Adres:</strong> Wielopole Skrzyńskie 206, 39-110 Wielopole Skrzyńskie<br><strong>Strona:</strong> —<br><strong>NIP:</strong> 8181731880<br><strong>Profil:</strong> naprawa i konserwacja komputerów i urządzeń peryferyjnych<br><br><strong>KROKI REJESTRACJI:</strong><br>1. Kim jesteś? → Firma<br>2. Dane: imię, nazwisko, e-mail, numer telefonu, NIP, adres<br>3. Czym jesteś zainteresowany? → sprzęt<br>4. Główny profil działalności → Inne<br>5. Stanowisko zawodowe → Inne</div>
+<div id="u28" class="card hidden"><strong>Jamroch Katarzyna</strong><br><br><strong>Firma:</strong> AZ-KOM DAMIAN LIWO<br><strong>Adres:</strong> Wielopole Skrzyńskie 206, 39-110 Wielopole Skrzyńskie<br><strong>Strona:</strong> —<br><strong>NIP:</strong> 8181731880<br><strong>Profil:</strong> naprawa i konserwacja komputerów i urządzeń peryferyjnych<br><br><strong>KROKI REJESTRACJI:</strong><br>1. Kim jesteś? → Firma<br>2. Dane: imię, nazwisko, e-mail, numer telefonu, NIP, adres<br>3. Czym jesteś zainteresowany? → sprzęt<br>4. Główny profil działalności → Inne<br>5. Stanowisko zawodowe → Inne</div>
+<div id="u29" class="card hidden"><strong>Piękoś Adrian</strong><br><br><strong>Firma:</strong> AZ-KOM DAMIAN LIWO<br><strong>Adres:</strong> Wielopole Skrzyńskie 206, 39-110 Wielopole Skrzyńskie<br><strong>Strona:</strong> —<br><strong>NIP:</strong> 8181731880<br><strong>Profil:</strong> naprawa i konserwacja komputerów i urządzeń peryferyjnych<br><br><strong>KROKI REJESTRACJI:</strong><br>1. Kim jesteś? → Firma<br>2. Dane: imię, nazwisko, e-mail, numer telefonu, NIP, adres<br>3. Czym jesteś zainteresowany? → sprzęt<br>4. Główny profil działalności → Inne<br>5. Stanowisko zawodowe → Inne</div>
+<div id="u30" class="card hidden"><strong>Rojek Anna</strong><br><br><strong>Firma:</strong> AZ-KOM DAMIAN LIWO<br><strong>Adres:</strong> Wielopole Skrzyńskie 206, 39-110 Wielopole Skrzyńskie<br><strong>Strona:</strong> —<br><strong>NIP:</strong> 8181731880<br><strong>Profil:</strong> naprawa i konserwacja komputerów i urządzeń peryferyjnych<br><br><strong>KROKI REJESTRACJI:</strong><br>1. Kim jesteś? → Firma<br>2. Dane: imię, nazwisko, e-mail, numer telefonu, NIP, adres<br>3. Czym jesteś zainteresowany? → sprzęt<br>4. Główny profil działalności → Inne<br>5. Stanowisko zawodowe → Inne</div>
+<div id="u31" class="card hidden"><strong>Szumańska Wiktoria</strong><br><br><strong>Firma:</strong> AZ-KOM DAMIAN LIWO<br><strong>Adres:</strong> Wielopole Skrzyńskie 206, 39-110 Wielopole Skrzyńskie<br><strong>Strona:</strong> —<br><strong>NIP:</strong> 8181731880<br><strong>Profil:</strong> naprawa i konserwacja komputerów i urządzeń peryferyjnych<br><br><strong>KROKI REJESTRACJI:</strong><br>1. Kim jesteś? → Firma<br>2. Dane: imię, nazwisko, e-mail, numer telefonu, NIP, adres<br>3. Czym jesteś zainteresowany? → sprzęt<br>4. Główny profil działalności → Inne<br>5. Stanowisko zawodowe → Inne</div>
 </div>
-</div>
 
-<div id="u2" class="card hidden"><strong>Jarosz Julia</strong><ol>
-<li>Chodak Travel</li><li>inne</li><li>inne</li><li>Adres sprawdź</li><li>Wyślij</li>
-</ol><hr><div class="small">Dębica, ul. Rzeszowska 26 · chodaktrawel.pl · NIP 8722093280</div></div>
-
-<div id="u3" class="card hidden"><strong>Banaś Amelia</strong><ol>
-<li>Chodak Travel</li><li>inne</li><li>inne</li><li>Adres sprawdź</li><li>Wyślij</li>
-</ol><hr><div class="small">Dębica, ul. Rzeszowska 26 · chodaktrawel.pl · NIP 8722093280</div></div>
-
-<div id="u4" class="card hidden"><strong>Baran Julia</strong><ol>
-<li>Chodak Travel</li><li>inne</li><li>inne</li><li>Adres sprawdź</li><li>Wyślij</li>
-</ol><hr><div class="small">Dębica, ul. Rzeszowska 26 · chodaktrawel.pl · NIP 8722093280</div></div>
-
-<div id="u5" class="card hidden"><strong>Buczak Kinga</strong><ol>
-<li>Chodak Travel</li><li>inne</li><li>inne</li><li>Adres sprawdź</li><li>Wyślij</li>
-</ol><hr><div class="small">Dębica, ul. Rzeszowska 26 · chodaktrawel.pl · NIP 8722093280</div></div>
-
-<div id="u6" class="card hidden"><strong>Dąbrowski Adrian</strong><ol>
-<li>Chodak Travel</li><li>inne</li><li>inne</li><li>Adres sprawdź</li><li>Wyślij</li>
-</ol><hr><div class="small">Dębica, ul. Rzeszowska 26 · chodaktrawel.pl · NIP 8722093280</div></div>
-
-<div id="u7" class="card hidden"><strong>Kosiba Maria</strong><ol>
-<li>Chodak Travel</li><li>inne</li><li>inne</li><li>Adres sprawdź</li><li>Wyślij</li>
-</ol><hr><div class="small">Dębica, ul. Rzeszowska 26 · chodaktrawel.pl · NIP 8722093280</div></div>
-
-<!-- ===== VERDA VIVO (u8–u15) ===== -->
-<div id="u8" class="card hidden"><strong>Kozioł Natalia</strong><ol>
-<li>Verda Vivo</li><li>inne</li><li>inne</li><li>Adres sprawdź</li><li>Wyślij</li>
-</ol><hr><div class="small">Dębica, ul. Polna 17 l/2 · verdavivo.pl · NIP 8722430903</div></div>
-
-<div id="u9" class="card hidden"><strong>Kucharska Julia</strong><ol><li>Verda Vivo</li><li>inne</li><li>inne</li><li>Adres</li><li>Wyślij</li></ol><hr><div class="small">Polna 17 l/2 · verdavivo.pl · NIP 8722430903</div></div>
-
-<div id="u10" class="card hidden"><strong>Kuta Weronika</strong><ol><li>Verda Vivo</li><li>inne</li><li>inne</li><li>Adres</li><li>Wyślij</li></ol><hr><div class="small">Polna 17 l/2 · verdavivo.pl · NIP 8722430903</div></div>
-
-<div id="u11" class="card hidden"><strong>Kutrzuba Beata</strong><ol><li>Verda Vivo</li><li>inne</li><li>inne</li><li>Adres</li><li>Wyślij</li></ol><hr><div class="small">Polna 17 l/2 · verdavivo.pl · NIP 8722430903</div></div>
-
-<div id="u12" class="card hidden"><strong>Kużdżał Oliwia</strong><ol><li>Verda Vivo</li><li>inne</li><li>inne</li><li>Adres</li><li>Wyślij</li></ol><hr><div class="small">Polna 17 l/2 · verdavivo.pl · NIP 8722430903</div></div>
-
-<div id="u13" class="card hidden"><strong>Majcher Julia</strong><ol><li>Verda Vivo</li><li>inne</li><li>inne</li><li>Adres</li><li>Wyślij</li></ol><hr><div class="small">Polna 17 l/2 · verdavivo.pl · NIP 8722430903</div></div>
-
-<div id="u14" class="card hidden"><strong>Marć Julia</strong><ol><li>Verda Vivo</li><li>inne</li><li>inne</li><li>Adres</li><li>Wyślij</li></ol><hr><div class="small">Polna 17 l/2 · verdavivo.pl · NIP 8722430903</div></div>
-
-<div id="u15" class="card hidden"><strong>Misielak Bartłomiej</strong><ol><li>Verda Vivo</li><li>inne</li><li>inne</li><li>Adres</li><li>Wyślij</li></ol><hr><div class="small">Polna 17 l/2 · verdavivo.pl · NIP 8722430903</div></div>
-
-<!-- ===== BRGAZ (u16–u21) ===== -->
-<div id="u16" class="card hidden"><strong>Nowak Gabriela</strong><ol><li>BRGaz</li><li>inne</li><li>inne</li><li>Adres</li><li>Wyślij</li></ol><hr><div class="small">Dębica, ul. Rzeszowska 139 · brgaz.pl · NIP 8181501281</div></div>
-
-<div id="u17" class="card hidden"><strong>Pasek Amelia</strong><ol><li>BRGaz</li><li>inne</li><li>inne</li><li>Adres</li><li>Wyślij</li></ol><hr><div class="small">Rzeszowska 139 · brgaz.pl · NIP 8181501281</div></div>
-
-<div id="u18" class="card hidden"><strong>Piłat Lena</strong><ol><li>BRGaz</li><li>inne</li><li>inne</li><li>Adres</li><li>Wyślij</li></ol><hr><div class="small">Rzeszowska 139 · brgaz.pl · NIP 8181501281</div></div>
-
-<div id="u19" class="card hidden"><strong>Sołowska Karolina</strong><ol><li>BRGaz</li><li>inne</li><li>inne</li><li>Adres</li><li>Wyślij</li></ol><hr><div class="small">Rzeszowska 139 · brgaz.pl · NIP 8181501281</div></div>
-
-<div id="u20" class="card hidden"><strong>Wojtaszek Ignacy</strong><ol><li>BRGaz</li><li>inne</li><li>inne</li><li>Adres</li><li>Wyślij</li></ol><hr><div class="small">Rzeszowska 139 · brgaz.pl · NIP 8181501281</div></div>
-
-<div id="u21" class="card hidden"><strong>Ozga Kacper</strong><ol><li>BRGaz</li><li>inne</li><li>inne</li><li>Adres</li><li>Wyślij</li></ol><hr><div class="small">Rzeszowska 139 · brgaz.pl · NIP 8181501281</div></div>
-
-<!-- ===== DAMIAN LIS FOTOGRAFIA (u22–u26) ===== -->
-<div id="u22" class="card hidden"><strong>Dziedzic Konrad</strong><ol><li>Damian Lis Fotografia</li><li>inne</li><li>inne</li><li>Adres</li><li>Wyślij</li></ol><hr><div class="small">Zawierzbie 52A, 39-204 Żyraków · NIP 8722216311</div></div>
-
-<div id="u23" class="card hidden"><strong>Rączka Amelia</strong><ol><li>Damian Lis Fotografia</li><li>inne</li><li>inne</li><li>Adres</li><li>Wyślij</li></ol><hr><div class="small">Zawierzbie 52A · NIP 8722216311</div></div>
-
-<div id="u24" class="card hidden"><strong>Szyszka Kamil</strong><ol><li>Damian Lis Fotografia</li><li>inne</li><li>inne</li><li>Adres</li><li>Wyślij</li></ol><hr><div class="small">Zawierzbie 52A · NIP 8722216311</div></div>
-
-<div id="u25" class="card hidden"><strong>Tylec Emilia</strong><ol><li>Damian Lis Fotografia</li><li>inne</li><li>inne</li><li>Adres</li><li>Wyślij</li></ol><hr><div class="small">Zawierzbie 52A · NIP 8722216311</div></div>
-
-<div id="u26" class="card hidden"><strong>Socha Wiktor</strong><ol><li>Damian Lis Fotografia</li><li>inne</li><li>inne</li><li>Adres</li><li>Wyślij</li></ol><hr><div class="small">Zawierzbie 52A · NIP 8722216311</div></div>
-
-<!-- ===== AZ-KOM (u27–u31) ===== -->
-<div id="u27" class="card hidden"><strong>Henk Martyna</strong><ol><li>az-kom Damian Liwo</li><li>inne</li><li>inne</li><li>Adres</li><li>Wyślij</li></ol><hr><div class="small">Wielopole Skrzyńskie 206 · NIP 8181731880</div></div>
-
-<div id="u28" class="card hidden"><strong>Jamroch Katarzyna</strong><ol><li>az-kom Damian Liwo</li><li>inne</li><li>inne</li><li>Adres</li><li>Wyślij</li></ol><hr><div class="small">Wielopole Skrzyńskie 206 · NIP 8181731880</div></div>
-
-<div id="u29" class="card hidden"><strong>Piękoś Adrian</strong><ol><li>az-kom Damian Liwo</li><li>inne</li><li>inne</li><li>Adres</li><li>Wyślij</li></ol><hr><div class="small">Wielopole Skrzyńskie 206 · NIP 8181731880</div></div>
-
-<div id="u30" class="card hidden"><strong>Rojek Anna</strong><ol><li>az-kom Damian Liwo</li><li>inne</li><li>inne</li><li>Adres</li><li>Wyślij</li></ol><hr><div class="small">Wielopole Skrzyńskie 206 · NIP 8181731880</div></div>
-
-<div id="u31" class="card hidden"><strong>Szumańska Wiktoria</strong><ol><li>az-kom Damian Liwo</li><li>inne</li><li>inne</li><li>Adres</li><li>Wyślij</li></ol><hr><div class="small">Wielopole Skrzyńskie 206 · NIP 8181731880</div></div>
+<button class="back" onclick="closePerson()">⬅ Lista nazwisk</button> <button class="back" onclick="goHome()">Strona główna</button>
 
 </div>
 
-<button class="back" onclick="closePerson()">⬅ Lista nazwisk</button>
-<button class="back" onclick="show('home')">Strona główna</button>
-</div>
+<div id="participation" class="hidden"> <h3>Uczestnictwo – fiszki</h3> <div id="flashGrid" class="grid"> <div class="tile secondary" onclick="openFlash('f1')">🎯 Po co tu jesteś</div> <div class="tile secondary" onclick="openFlash('f2')">🧠 Jak się zachować</div> <div class="tile secondary" onclick="openFlash('f3')">👀 Na co patrzeć</div> <div class="tile secondary" onclick="openFlash('f4')">❓ O co pytać</div> <div class="tile secondary" onclick="openFlash('f5')">📸 Co wynieść</div> <div class="tile secondary" onclick="openFlash('f6')">⚠️ Czego nie robić</div> </div> <div id="flashcards" class="hidden"> <div id="f1" class="card hidden"><h4>🎯 Po co tu jesteś</h4><ul><li>zobaczyć, jak naprawdę działa branża reklamy</li><li>zobaczyć trendy i nowości w branży</li><li>zainspirować się nowościami i trendami w branży reklamowej i poligraficznej</li><li>zobaczyć realne stanowiska i zakresy obowiązków</li></ul></div> <div id="f2" class="card hidden"><h4>🧠 Jak się zachować</h4><ul><li>bądź ciekawy i aktywny</li><li>zadawaj pytania, nie graj eksperta</li><li>korzystaj z prezentacji, pokazów i demonstracji</li><li>pytaj, co możesz zabrać (materiały, katalogi, próbki)</li><li>wczuj się w rolę: klienta, pracownika lub przyszłego specjalisty</li><li>telefon traktuj jak narzędzie</li></ul></div> <div id="f3" class="card hidden"><h4>👀 Na co patrzeć</h4><ul><li>jak prezentowane są projekty i produkty</li><li>jak ludzie mówią o swojej pracy</li><li>jakie technologie się powtarzają (trendy)</li><li>czy jakość idzie w parze z marketingiem</li></ul></div> <div id="f4" class="card hidden"><h4>❓ O co pytać</h4><ul><li><strong>sprzęt / technologia:</strong> dla kogo to jest? jaki błąd robią początkujący?</li><li><strong>usługi / druk / agencje:</strong> jak wygląda proces? co klienci źle rozumieją?</li><li><strong>rozwój zawodowy:</strong> jakie porady firma dałaby uczniowi kończącemu szkołę za 2–3 lata?</li><li><strong>branża:</strong> co najbardziej się liczy na tym stanowisku lub w tej branży?</li></ul></div> <div id="f5" class="card hidden"><h4>📸 Co wynieść</h4><ul><li><strong>dosłownie:</strong> zdjęcia stoisk, rozwiązań, materiały, którymi dzielą się firmy</li><li><strong>w przenośni:</strong> inspiracje, pomysły do własnych projektów, kierunek nauki, świadomość braków</li></ul></div> <div id="f6" class="card hidden"><h4>⚠️ Czego nie robić</h4><ul><li>nie narzekaj, że wszystko już widziałeś</li><li>pamiętaj: to tylko 3 godziny, a nie zoo do oglądania</li><li>to miejsce do doświadczania i inspirowania się</li><li>nie znikaj bez celu – zobacz, czego jeszcze nie wiesz i co warto wiedzieć</li><li><strong>w skrócie:</strong> wykorzystaj czas maksymalnie</li></ul></div> </div> <button class="back" onclick="backToFlashes()">⬅ Wróć do fiszek</button> <button class="back" onclick="goHome()">Strona główna</button> </div>
 
-<!-- UCZESTNICTWO – FISZKI (BEZ ZMIAN) -->
-<div id="participation" class="hidden">
-  <div id="flashGrid" class="grid">
-    <div class="tile secondary">🎯 Po co tu jesteś</div>
-    <div class="tile secondary">🧠 Jak się zachować</div>
-    <div class="tile secondary">👀 Na co patrzeć</div>
-    <div class="tile secondary">❓ O co pytać</div>
-    <div class="tile secondary">📸 Co wynieść</div>
-    <div class="tile secondary">⚠️ Czego nie robić</div>
-  </div>
-</div>
+<div id="after" class="hidden"> <div class="card"> <h3>Po targach</h3> <ol> <li><strong>Co Cię naprawdę zaskoczyło?</strong>
 
-<!-- PO TARGACH -->
-<div id="after" class="hidden">
-  <div class="card">
-    <h3>Po targach</h3>
-    <ol>
-      <li>Co Cię naprawdę zaskoczyło?</li>
-      <li>Co było najciekawsze i dlaczego?</li>
-      <li>Jedna rzecz, której się dowiedziałeś(-aś)</li>
-      <li>Jaką umiejętność warto rozwijać?</li>
-      <li>Czy widzisz siebie w tej branży?</li>
-    </ol>
-  </div>
-  <button class="back" onclick="show('home')">Strona główna</button>
-</div>
 
-</div>
+<small>(np. skala sprzętu, sposób rozmowy z klientem, technologie)</small></li> <li><strong>Co było dla Ciebie najciekawsze i dlaczego?</strong>
 
-<script>
-function show(id){['home','registration','participation','after'].forEach(s=>document.getElementById(s).classList.add('hidden'));document.getElementById(id).classList.remove('hidden')}
-function openPerson(id){document.getElementById('people').classList.remove('hidden');document.querySelectorAll('#people .card').forEach(c=>c.classList.add('hidden'));document.getElementById(id).classList.remove('hidden')}
-function closePerson(){document.getElementById('people').classList.add('hidden')}
-</script>
 
-</body>
-</html>
+<small>(konkretnie, nie ogólnie)</small></li> <li><strong>Jedna rzecz, której się dowiedziałeś(-aś), a wcześniej nie wiedziałeś(-aś)</strong></li> <li><strong>Jaką umiejętność lub obszar warto rozwijać, jeśli myślisz o tej branży?</strong>
+
+
+<small>(np. grafika, druk, sprzedaż, technologia, komunikacja)</small></li> <li><strong>Czy widzisz siebie w tej branży?</strong>
+
+
+<small>tak / nie / jeszcze nie wiem – jedno zdanie dlaczego</small></li> </ol> </div> <button class="back" onclick="goHome()">Strona główna</button> </div> </div>
+
+<script> function hideAll(){['home','registration','participation','after'].forEach(id=>document.getElementById(id).classList.add('hidden'));} function goHome(){hideAll();document.getElementById('home').classList.remove('hidden');} function openRegistration(){hideAll();document.getElementById('registration').classList.remove('hidden');} function openParticipation(){hideAll();document.getElementById('participation').classList.remove('hidden');} function openAfter(){hideAll();document.getElementById('after').classList.remove('hidden');} function openFlash(id){document.getElementById('flashGrid').classList.add('hidden');document.getElementById('flashcards').classList.remove('hidden');document.querySelectorAll('#flashcards .card').forEach(c=>c.classList.add('hidden'));document.getElementById(id).classList.remove('hidden');} function openPerson(id){document.getElementById('people').classList.remove('hidden');document.querySelectorAll('#people .card').forEach(c=>c.classList.add('hidden'));document.getElementById(id).classList.remove('hidden');} function closePerson(){document.getElementById('people').classList.add('hidden');} function backToFlashes(){document.getElementById('flashcards').classList.add('hidden');document.getElementById('flashGrid').classList.remove('hidden');} </script>
+
+</body> </html>
